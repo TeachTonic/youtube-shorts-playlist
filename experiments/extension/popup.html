@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Encounter capture</title></head>
+<body><main><h1>Encounter capture</h1>
+<p class="notice">Local-only Phase 0. Encounter detection is not proof of viewing.</p>
+<p id="error" role="alert"></p>
+<dl><dt>Status</dt><dd id="status">Loading</dd><dt>Encounters / Included</dt><dd id="counts">0 / 0</dd>
+<dt>Last persisted video ID</dt><dd id="video">—</dd><dt>Detection mechanism</dt><dd id="mechanism">—</dd>
+<dt>Last local event (no server sync)</dt><dd id="last">—</dd></dl>
+<div class="controls">
+<button data-command="start">Start Capture</button><button data-command="pause">Pause</button>
+<button data-command="resume">Resume</button><button data-command="include">Include Current Short</button>
+<button data-command="finish">Finish</button></div>
+<p>Start, Resume and Include require the YouTube capture tab to be foreground. Use its extension popup.</p>
+<label><input id="polling" type="checkbox"> Experimental URL comparison every 500 ms while a diagnostic view/popup is open and the capture tab is foreground</label>
+<button id="diagnostics">Open diagnostic window</button><p>Only one locally saved session. Finish, export, then reset before another run.</p>
+</main><script type="module" src="/src/view.ts"></script></body></html>

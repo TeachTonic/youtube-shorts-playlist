@@ -1,0 +1,26 @@
+{
+  "name": "watch-what-i-watched-phase-0",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "build:extension": "vite build --config experiments/extension/vite.config.ts",
+    "build:player": "vite build --config experiments/player/vite.config.ts",
+    "build": "npm run build:extension && npm run build:player",
+    "dev:player": "vite --config experiments/player/vite.config.ts",
+    "preview:player": "vite preview --config experiments/player/vite.config.ts",
+    "test:report": "vitest run --reporter=default --reporter=json --outputFile=.artifacts/tests.json",
+    "inspect:build": "node experiments/verify-artifacts.mjs"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.0",
+    "@types/node": "^24.0.0",
+    "fake-indexeddb": "^6.2.0",
+    "happy-dom": "^20.14.5",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.0",
+    "vitest": "^3.2.0"
+  }
+}

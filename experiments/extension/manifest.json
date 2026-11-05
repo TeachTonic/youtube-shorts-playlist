@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Encounter Capture — Phase 0",
+  "version": "0.0.1",
+  "description": "Local-only, explicitly started YouTube Shorts encounter experiment.",
+  "permissions": [
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "background": {
+    "service_worker": "worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'"
+  }
+}

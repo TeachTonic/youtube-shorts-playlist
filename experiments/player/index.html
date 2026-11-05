@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin"><title>Portrait YouTube player experiment</title></head>
+<body><main><h1>Watch What I Watched — player experiment</h1>
+<p>Official player, one item at a time. No automatic playback or advance. No video or metadata downloads.</p>
+<form id="sequence"><label for="ids">YouTube video IDs, one per line (maximum 20)</label>
+<textarea id="ids" rows="4" required placeholder="Paste IDs from your own manual test"></textarea><button type="submit">Load sequence</button></form>
+<section aria-labelledby="title"><h2 id="title">No sequence loaded</h2><p id="position">0 of 0</p>
+<div class="controls"><button id="previous" disabled>Previous</button><button id="play" disabled>Play</button><button id="next" disabled>Next</button>
+<a id="fallback" hidden target="_blank" rel="noopener">Open in YouTube</a></div>
+<p id="status" role="status">Enter video IDs to begin. YouTube is contacted only after Play.</p>
+<div id="viewport"><div id="mount"></div></div></section>
+<h2>Player events</h2><pre id="events" aria-label="Player diagnostics"></pre>
+</main><script type="module" src="/src/main.ts"></script></body></html>
